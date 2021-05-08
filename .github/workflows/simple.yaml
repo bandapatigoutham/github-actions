@@ -21,6 +21,7 @@ jobs:
 
   run-windows-command2: 
     runs-on: windows-latest
+    needs: [run-shell-command]
     steps:
       - name: create a directory
         run: get-location 
