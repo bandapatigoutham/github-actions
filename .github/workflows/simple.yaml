@@ -19,15 +19,12 @@ jobs:
           print(platform.processor())
         shell: python
 
-  # run-shell-command2: 
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: create a directory
-  #       run: /bin/mkdir Hello  
-  #     - name: change directory
-  #       run: /usr/bin/cd Hello
-  #     - name: touch a file
-  #       run: /usr/bin/touch hello.txt
-  #     - name: list files  
-  #       run: /usr/bin/ls -latr 
+  run-windows-command2: 
+    runs-on: windows-latest
+    steps:
+      - name: create a directory
+        run: get-location 
+      - name: directory bash
+        run: pwd
+        shell: bash
 
