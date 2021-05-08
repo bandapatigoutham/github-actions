@@ -14,7 +14,7 @@ jobs:
           npm -v
           /bin/cat /etc/resolv.conf
 
-  run-shell-command: 
+  run-shell-command2: 
     runs-on: ubuntu-latest
     steps:
       - name: create a directory
