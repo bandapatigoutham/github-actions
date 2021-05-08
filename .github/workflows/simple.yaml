@@ -7,12 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: echho "Hello World"
+        run: echo "Hello World"
       - name: multipleline script
         run: 
           node -v
+      - name: npm version
           npm -v
-          /bin/cat /etc/resolv.conf
+         /usr/bin/cat /etc/resolv.conf
 
   run-shell-command2: 
     runs-on: ubuntu-latest
@@ -20,9 +21,9 @@ jobs:
       - name: create a directory
         run: /bin/mkdir Hello  
       - name: change directory
-        run: /bin/cd Hello
+        run: /usr/bin/cd Hello
       - name: touch a file
-        run: /bin/touch hello.txt
+        run: /usr/bin/touch hello.txt
       - name: list files  
-        run: ls -latr 
+        run: /usr/bin/ls -latr 
 
