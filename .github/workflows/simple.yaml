@@ -13,3 +13,16 @@ jobs:
           node -v
           npm -v
           /bin/cat /etc/resolv.conf
+
+  run-shell-command: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: create a directory
+        run: /bin/mkdir Hello  
+      - name: change directory
+        run: /bin/cd Hello
+      - name: touch a file
+        run: /bin/touch hello.txt
+      - name: list files  
+        run: ls -latr 
+
