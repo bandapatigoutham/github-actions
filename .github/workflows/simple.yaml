@@ -9,22 +9,25 @@ jobs:
       - name: echo a string
         run: echo "Hello World"
       - name: multipleline script
-        run: 
+        run: |
           node -v
-      - name: npm version
-        run:
           npm -v
-         /usr/bin/cat /etc/resolv.conf
+      #   /usr/bin/cat /etc/resolv.conf
+      - name: python command 
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
 
-  run-shell-command2: 
-    runs-on: ubuntu-latest
-    steps:
-      - name: create a directory
-        run: /bin/mkdir Hello  
-      - name: change directory
-        run: /usr/bin/cd Hello
-      - name: touch a file
-        run: /usr/bin/touch hello.txt
-      - name: list files  
-        run: /usr/bin/ls -latr 
+  # run-shell-command2: 
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: create a directory
+  #       run: /bin/mkdir Hello  
+  #     - name: change directory
+  #       run: /usr/bin/cd Hello
+  #     - name: touch a file
+  #       run: /usr/bin/touch hello.txt
+  #     - name: list files  
+  #       run: /usr/bin/ls -latr 
 
