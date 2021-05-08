@@ -12,6 +12,7 @@ jobs:
         run: 
           node -v
       - name: npm version
+        run:
           npm -v
          /usr/bin/cat /etc/resolv.conf
 
